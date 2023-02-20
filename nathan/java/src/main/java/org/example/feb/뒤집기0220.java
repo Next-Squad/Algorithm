@@ -17,6 +17,7 @@ public class 뒤집기0220 {
 			zero++;
 		}
 
+
 		for (int i = 1; i < str.length(); i++) {
 			char ch = str.charAt(i);
 			if (pre != ch) {
