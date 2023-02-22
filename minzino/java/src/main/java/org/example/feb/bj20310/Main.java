@@ -15,16 +15,26 @@ public class Main {
         String numStr = br.readLine();
 
         for (int i = 0; i < numStr.length(); i++) {
-
             arr[numStr.charAt(i) - '0']++;
         }
 
         arr[0] /= 2;
         arr[1] /= 2;
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i]; j++) {
-                sb.append(i);
+        int deletedZeros = 0;
+        int deletedOnes = 0;
+        for (char number : numStr.toCharArray()) {
+            if (number == '1') {
+                if (deletedOnes < arr[1]) {
+                    deletedOnes++;
+                } else {
+                    sb.append(1);
+                }
+            } else {
+                if (deletedZeros < arr[0]) {
+                    sb.append(0);
+                    deletedZeros++;
+                }
             }
         }
         System.out.println(sb);
