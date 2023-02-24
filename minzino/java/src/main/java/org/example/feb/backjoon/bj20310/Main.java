@@ -1,4 +1,4 @@
-package main.java.org.example.feb.bj20310;
+package main.java.org.example.feb.backjoon.bj20310;
 
 import java.io.BufferedReader;
 import java.io.IOException;
