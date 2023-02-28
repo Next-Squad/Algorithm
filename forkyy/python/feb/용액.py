@@ -7,8 +7,8 @@ nums = list(map(int, input().split(' ')))
 
 p1, p2 = 0, n-1
 
-cur = 1e9
-result = []
+cur = abs(nums[p1] + nums[p2])
+result = [nums[p1], nums[p2]]
 
 while p1 < p2:
     val = abs(nums[p1] + nums[p2])
