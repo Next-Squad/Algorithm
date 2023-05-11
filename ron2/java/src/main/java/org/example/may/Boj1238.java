@@ -60,14 +60,9 @@ public class Boj1238 {
         while (!pq.isEmpty()) {
             Node curr = pq.poll();
 
-            if(check[curr.dest]) {
-                continue;
-            }
-
-            check[curr.dest] = true;
             for(Node next : g.get(curr.dest)) {
-                if(!check[next.dest] && dist[next.dest] > dist[curr.dest] + curr.weight) {
-                    dist[next.dest] = dist[curr.dest] + curr.weight;
+                if(dist[next.dest] > dist[curr.dest] + next.weight) {
+                    dist[next.dest] = dist[curr.dest] + next.weight;
                     pq.offer(new Node(next.dest, dist[next.dest]));
                 }
             }
