@@ -54,7 +54,6 @@ public class Boj1238 {
         int[] dist = new int[n+1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[start] = 0;
-        boolean[] check = new boolean[n+1];
         pq.offer(new Node(start, 0));
 
         while (!pq.isEmpty()) {
